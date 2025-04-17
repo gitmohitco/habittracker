@@ -1,0 +1,96 @@
+/* Login.css */
+.auth-form {
+    max-width: 400px;
+    margin: 4rem auto; /* Ensures space for top toasts */
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .auth-form h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a202c;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .auth-form input {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #2d3748;
+    background-color: #f7fafc;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .auth-form input:focus {
+    outline: none;
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+  }
+  
+  .auth-form input::placeholder {
+    color: #a0aec0;
+  }
+  
+  .auth-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .auth-form button:hover {
+    background-color: #2b6cb0;
+  }
+  
+  .auth-form button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.3);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .auth-form {
+      margin: 3rem 1rem; /* Slightly reduced top margin for mobile, still avoids toast overlap */
+      padding: 1.5rem;
+    }
+  
+    .auth-form h2 {
+      font-size: 1.25rem;
+    }
+  
+    .auth-form input,
+    .auth-form button {
+      font-size: 0.875rem;
+    }
+  }
+  
+  /* Animation */
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .auth-form {
+    animation: slideUp 0.4s ease-out;
+  }

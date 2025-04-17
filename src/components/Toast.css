@@ -1,0 +1,107 @@
+/* Toast.css (Colored Backgrounds) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .toast {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 400px;
+    width: 90%;
+    background-color: #10b981; /* Default success */
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    animation: slideDown 0.5s forwards;
+    animation: slideUp 7s forwards;
+  }
+  
+  /* .toast.exiting {
+    animation: slideUp 0.3s ease-in-out forwards;
+  } */
+  
+  .toast.success {
+    background-color: #10b981;
+  }
+  
+  .toast.error {
+    background-color: #ef4444;
+  }
+  
+  .toast.warning {
+    background-color: #f59e0b;
+  }
+  
+  .toast .close-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    margin-left: auto;
+    transition: opacity 0.2s ease;
+  }
+  
+  .toast .close-button:hover {
+    opacity: 0.8;
+  }
+  
+  .toast .close-button:focus {
+    outline: none;
+    opacity: 0.8;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-50%) translateY(-20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .toast {
+      max-width: 95%;
+      padding: 0.75rem 1rem;
+      font-size: 0.875rem;
+    }
+  
+    .toast .close-button {
+      font-size: 1rem;
+    }
+  }
+  
+  /* @keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(20px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(20px); }
+  } */
+
+  

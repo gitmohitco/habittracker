@@ -1,0 +1,44 @@
+.heatmap {
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .heatmap h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  /* Custom Heatmap Colors */
+  .color-empty {
+    fill: #ebedf0;
+  }
+  
+  .color-github-1 {
+    fill: #9be9a8;
+  }
+  
+  .color-github-2 {
+    fill: #40c463;
+  }
+  
+  .color-github-3 {
+    fill: #30a14e;
+  }
+  
+  .color-github-4 {
+    fill: #216e39;
+  }
+  
+  /* Optional tooltip styling (if you add tooltips) */
+  .react-calendar-heatmap text {
+    font-size: 10px;
+    fill: #555;
+  }
+  
+  .react-calendar-heatmap .react-calendar-heatmap-month-label {
+    font-size: 12px;
+    fill: #555;
+  }
+  

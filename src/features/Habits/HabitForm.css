@@ -1,0 +1,110 @@
+/* HabitForm.css */
+.habit-form {
+    display: flex;
+    gap: 0.75rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    animation: slideUp 0.4s ease-out;
+  }
+  
+  .habit-form input,
+  .habit-form select {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    color: #2d3748;
+    background-color: #f7fafc;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  
+  .habit-form input:focus,
+  .habit-form select:focus {
+    outline: none;
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .habit-form input::placeholder {
+    color: #a0aec0;
+  }
+  
+  .habit-form select {
+    max-width: 150px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23718096' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+  }
+  
+  .habit-form button {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(90deg, #3182ce 0%, #2b6cb0 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .habit-form button:hover {
+    background: linear-gradient(90deg, #2b6cb0 0%, #2a5e9b 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(49, 130, 206, 0.3);
+  }
+  
+  .habit-form button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.3);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .habit-form {
+      flex-direction: column;
+      padding: 0.75rem;
+    }
+  
+    .habit-form input,
+    .habit-form select {
+      width: 100%;
+      max-width: none;
+    }
+  
+    .habit-form button {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .habit-form {
+      padding: 0.5rem;
+    }
+  
+    .habit-form input,
+    .habit-form select,
+    .habit-form button {
+      font-size: 0.75rem;
+    }
+  }
+  
+  /* Animation */
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
